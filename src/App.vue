@@ -1,6 +1,9 @@
 <template>
-  <div>
+  <div class="main">
     <TopNavView class="nav"></TopNavView>
+    <div class="bg">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -14,6 +17,15 @@ export default {
   }
 }
 </script>
+<style scoped lang="less">
+.main {
+  display: flex;
+  flex-direction: column;
 
-<style>
+.bg {
+    flex: 1;
+  background-color: #f4f4f4;
+}
+
+}
 </style>
