@@ -3,27 +3,46 @@
     <div class="recommend_container">
       <div class="recommend_title">推荐</div>
       <ul>
-        <li>热门博文</li>
-        <li>每日一问</li>
+        <li class="active" cid="0">热门博文</li>
+        <li cid="440">每日一问</li>
       </ul>
     </div>
     <div class="recommend_category">
       <div class="recommend_title">专题</div>
       <ul>
-        <li>面试相关</li>
-        <li>性能优化</li>
-        <li>framework</li>
-        <li>开源库源码</li>
-        <li>当场分享</li>
+        <li cid="73">面试相关</li>
+        <li cid="78">性能优化</li>
+        <li cid="152">framework</li>
+        <li cid="460">开源库源码</li>
+        <li cid="510">当场分享</li>
       </ul>
     </div>
-
   </div>
 </template>
 
 <script>
+function setSideBarStatus(vue) {
+  const liList = document.getElementsByTagName('li')
+  for (let i = 0; i < liList.length; i++) {
+    liList[i].onclick = function () {
+      //先把别人干掉
+      for (let i = 0; i < liList.length; i++) {
+        liList[i].classList.remove('active')
+      }
+      //再给自己加上
+      liList[i].classList.add('active')
+
+      //把事件传出去
+      vue.$emit('SideBarLiClicked', liList[i].getAttribute('cid'))
+    }
+  }
+}
+
 export default {
-  name: "RecommendCom"
+  name: "RecommendCom",
+  mounted() {
+    setSideBarStatus(this)
+  }
 }
 </script>
 
@@ -32,9 +51,10 @@ export default {
   background-color: white;
   padding-left: 10px;
   padding-right: 10px;
+  border-radius: 4px;
 
   .recommend_container {
-    padding-bottom: 8px;
+    padding-bottom: 2px;
     border-bottom: solid #e2e2e2 1px;
 
     .recommend_title {
@@ -53,19 +73,22 @@ export default {
         width: 120px;
         height: 30px;
         margin: 5px 0;
-        font-size: 14px;
+        font-size: 15px;
         cursor: pointer;
-        color: white;
+
         line-height: 30px;
-        background-color: #1b93fb;
-        border-radius: 3px;
+
+        &:hover {
+          color: white;
+          background-color: #1b93fb;
+          border-radius: 3px;
+        }
       }
     }
   }
 
   .recommend_category {
     padding-bottom: 8px;
-    border-bottom: solid #e2e2e2 1px;
 
     .recommend_title {
       color: #276692;
@@ -83,15 +106,23 @@ export default {
         width: 120px;
         height: 30px;
         margin: 5px 0;
-        font-size: 14px;
+        font-size: 15px;
         cursor: pointer;
-        color: white;
         line-height: 30px;
-        background-color: #1b93fb;
-        border-radius: 3px;
+
+        &:hover {
+          color: white;
+          background-color: #1b93fb;
+          border-radius: 3px;
+        }
       }
     }
   }
 
+  .active {
+    color: white;
+    background-color: #1b93fb;
+    border-radius: 3px;
+  }
 }
 </style>
