@@ -10,7 +10,6 @@
         <a href="#" class="register" @click="onRegisterClicked">注册</a>
       </div>
     </div>
-
   </div>
 </template>
 
