@@ -8,3 +8,4 @@ bus.$off = emitter.off
 bus.$emit = emitter.emit
 
 export default bus
+
