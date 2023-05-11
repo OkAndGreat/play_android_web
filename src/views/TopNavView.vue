@@ -4,7 +4,7 @@
       <div class="logo">
         <a href=""> <img src="https://www.wanandroid.com/resources/image/pc/logo.png" alt="logo"></a>
       </div>
-      <TopNavBar></TopNavBar>
+        <TopNavBar></TopNavBar>
       <div class="user">
         <a href="#" class="login" @click="onLoginClicked">登录</a>
         <a href="#" class="register" @click="onRegisterClicked">注册</a>

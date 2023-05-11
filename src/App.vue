@@ -1,20 +1,20 @@
 <template>
-  <div class="main">
-    <TopNavView class="nav"></TopNavView>
-    <div class="bg">
-      <router-view></router-view>
+    <div class="main">
+        <TopNavView class="top_nav_bar_nav"></TopNavView>
+        <div class="bg">
+            <router-view></router-view>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
 import TopNavView from "@/views/TopNavView";
 
 export default {
-  name: 'App',
-  components: {
-    TopNavView
-  }
+    name: 'App',
+    components: {
+        TopNavView
+    }
 }
 </script>
 <style scoped lang="less">
@@ -22,10 +22,10 @@ export default {
   display: flex;
   flex-direction: column;
 
-.bg {
+  .bg {
     flex: 1;
-  background-color: #f4f4f4;
-}
+    background-color: #f4f4f4;
+  }
 
 }
 </style>
