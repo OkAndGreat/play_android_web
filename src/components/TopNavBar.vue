@@ -56,6 +56,7 @@
 <script>
 
 const TAG = "TopNavBar"
+
 function setNavActiveStatus(router) {
     const topNavBar = document.getElementsByClassName("top_nav_bar_nav")[0]
     const liList = topNavBar.getElementsByTagName('li')

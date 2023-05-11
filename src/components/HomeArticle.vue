@@ -1,74 +1,74 @@
 <template>
-  <div class="article_item" @click="onArticleClicked">
-    <div class="info_opt">❤</div>
-    <div class="info_art">
-      <p>{{ title }}</p>
-      <span class="istop">置顶</span>
-      <span class="tags" v-if="showTag1">本站发布</span>
-      <span class="tags" v-if="showTag2">问答</span>
-      <span class="aauthor">作者：{{ author }}</span>
-      <span class="achapter">分类：{{ chapter }}</span>
-      <span class="aniceData">时间：{{ time }}</span>
+    <div class="article_item" @click="onArticleClicked">
+        <div class="info_opt">❤</div>
+        <div class="info_art">
+            <p>{{ title }}</p>
+            <span class="istop">置顶</span>
+            <span class="tags" v-if="showTag1">本站发布</span>
+            <span class="tags" v-if="showTag2">问答</span>
+            <span class="aauthor">作者：{{ author }}</span>
+            <span class="achapter">分类：{{ chapter }}</span>
+            <span class="aniceData">时间：{{ time }}</span>
+        </div>
+        <div class="article_more">...</div>
     </div>
-    <div class="article_more">...</div>
-  </div>
 </template>
 
 <script>
 export default {
-  name: "HomeArticle",
-  props: {
-    // 文章的标题
-    title: {
-      type: String,
-      default: ''
+    name: "HomeArticle",
+    props: {
+        // 文章的标题
+        title: {
+            type: String,
+            default: ''
+        },
+        // 作者名字
+        author: {
+            type: String,
+            default: ''
+        },
+        chapter: {
+            type: String,
+            default: ''
+        },
+        time: {
+            type: String,
+            default: ''
+        },
+        link: {
+            type: String,
+            default: ''
+        },
+        tags: {
+            type: Array
+        }
     },
-    // 作者名字
-    author: {
-      type: String,
-      default: ''
+    methods: {
+        onArticleClicked() {
+            window.open(this.link)
+        }
     },
-    chapter: {
-      type: String,
-      default: ''
-    },
-    time: {
-      type: String,
-      default: ''
-    },
-    link: {
-      type: String,
-      default: ''
-    },
-    tags: {
-      type: Array
+    computed: {
+        showTag1() {
+            if (this.tags.length === 0) {
+                return false
+            }
+            for (let i = 0; i < this.tags.length; i++) {
+                if (this.tags[i].name === '本站发布') return true
+            }
+            return false
+        },
+        showTag2() {
+            if (this.tags.length === 0) {
+                return false
+            }
+            for (let i = 0; i < this.tags.length; i++) {
+                if (this.tags[i].name === '问答') return true
+            }
+            return false
+        }
     }
-  },
-  methods: {
-    onArticleClicked() {
-      window.open(this.link)
-    }
-  },
-  computed: {
-    showTag1() {
-      if (this.tags.length === 0) {
-        return false
-      }
-      for (let i = 0; i < this.tags.length; i++) {
-        if (this.tags[i].name === '本站发布') return true
-      }
-      return false
-    },
-    showTag2() {
-      if (this.tags.length === 0) {
-        return false
-      }
-      for (let i = 0; i < this.tags.length; i++) {
-        if (this.tags[i].name === '问答') return true
-      }
-      return false
-    }
-  }
 }
 </script>
 
