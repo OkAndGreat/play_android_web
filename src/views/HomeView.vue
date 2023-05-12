@@ -59,11 +59,8 @@
 
         </div>
         <div class="main_right">
-            <form class="searchForm">
-                <input class="searchInput" type="text" placeholder="搜索关键词以空格形式隔开"
-                       v-on:focus="onSearchInputFocused" v-on:blur="onSearchInputNotFocused">
-                <div class="searchIconBox"><img ref="searchIcon" :src="useFocusedSearchIcon ? searchFocusedIcon : searchNormalIcon" class="searchIcon"></div>
-            </form>
+            <SearchWidget></SearchWidget>
+            <UserOpt></UserOpt>
         </div>
 
 
@@ -76,8 +73,8 @@ import {getTopArticle} from "@/network/API";
 import {getTreeArticle} from "@/network/API";
 import SideBar from "@/components/SideBar";
 import HomeArticle from "@/components/HomeArticle";
-import searchNormalIcon from '@/svg/search_icon.svg'
-import searchFocusedIcon from '@/svg/search_focus_icon.svg'
+import UserOpt from "@/components/UserOpt.vue"
+import SearchWidget from "@/components/SearchWidget.vue";
 
 
 /* eslint-disable */
@@ -96,27 +93,10 @@ export default {
             // 每当下一页数据请求回来之后，千万要记得，把 loading 从 true 改为 false
             loading: false,
             // 所有数据是否加载完毕了，如果没有更多数据了，一定要把 finished 改成 true
-            finished: false,
-            useFocusedSearchIcon: false,
-            searchNormalIcon,
-            searchFocusedIcon
+            finished: false
         }
     },
     methods: {
-        onSearchInputFocused() {
-            console.log(TAG + "onSearchInputFocused")
-            const searchInput = document.getElementsByClassName('searchForm')[0]
-            searchInput.style.border = '1px solid #6EB8FC'
-
-            this.useFocusedSearchIcon = !this.useFocusedSearchIcon
-        },
-        onSearchInputNotFocused() {
-            console.log(TAG + "onSearchInputNotFocused")
-            const searchInput = document.getElementsByClassName('searchForm')[0]
-            searchInput.style.border = '1px solid #dadada'
-
-            this.useFocusedSearchIcon = !this.useFocusedSearchIcon
-        },
         onUrlClicked(url) {
             window.open(url)
         },
@@ -158,7 +138,9 @@ export default {
     },
     components: {
         SideBar,
-        HomeArticle
+        HomeArticle,
+        UserOpt,
+        SearchWidget
     }
 }
 </script>
@@ -212,37 +194,7 @@ export default {
   .main_right {
     margin-left: 33px;
 
-    .searchForm {
-      width: 297px;
-      height: 36px;
-      border: 1px solid #dadada;
-      border-radius: 5px;
-      background-color: #fafafa;
-      overflow: hidden;
 
-      .searchInput {
-        height: 36px;
-        width: 190px;
-        line-height: 36px;
-        text-indent: 5px;
-        font-size: 15px;
-        background-color: transparent;
-      }
-
-      .searchIconBox {
-        height: 36px;
-        width: 40px;
-        align-items: center;
-        float: right;
-
-        .searchIcon {
-          width: 20px;
-          height: 36px;
-          line-height: 36px;
-          cursor: pointer;
-        }
-      }
-    }
   }
 }
 </style>
