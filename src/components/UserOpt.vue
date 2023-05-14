@@ -36,6 +36,10 @@
         color: #fff;
         display: inline-block;
         position: relative;
+
+        &:hover {
+            background-color: red;
+        }
     }
 
     .new::before {

@@ -61,6 +61,7 @@
         <div class="main_right">
             <SearchWidget></SearchWidget>
             <UserOpt></UserOpt>
+            <FrequentWebsite></FrequentWebsite>
         </div>
 
 
@@ -75,6 +76,7 @@ import SideBar from "@/components/SideBar";
 import HomeArticle from "@/components/HomeArticle";
 import UserOpt from "@/components/UserOpt.vue"
 import SearchWidget from "@/components/SearchWidget.vue";
+import FrequentWebsite from "@/components/FrequentWebsite.vue";
 
 
 /* eslint-disable */
@@ -137,6 +139,7 @@ export default {
         this.initArticles()
     },
     components: {
+        FrequentWebsite,
         SideBar,
         HomeArticle,
         UserOpt,

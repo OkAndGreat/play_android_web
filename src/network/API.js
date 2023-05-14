@@ -171,3 +171,376 @@ export const getTreeArticle = function (_page, _cid) {
     })
 }
 
+
+/**
+ * {
+ * "data": [
+ * {
+ * "id": 6,
+ * "link": "",
+ * "name": "面试",
+ * "order": 1,
+ * "visible": 1
+ * },
+ * {
+ * "id": 9,
+ * "link": "",
+ * "name": "Studio3",
+ * "order": 1,
+ * "visible": 1
+ * },
+ * {
+ * "id": 5,
+ * "link": "",
+ * "name": "动画",
+ * "order": 2,
+ * "visible": 1
+ * },
+ * {
+ * "id": 1,
+ * "link": "",
+ * "name": "自定义View",
+ * "order": 3,
+ * "visible": 1
+ * },
+ * {
+ * "id": 2,
+ * "link": "",
+ * "name": "性能优化 速度",
+ * "order": 4,
+ * "visible": 1
+ * },
+ * {
+ * "id": 3,
+ * "link": "",
+ * "name": "gradle",
+ * "order": 5,
+ * "visible": 1
+ * },
+ * {
+ * "id": 4,
+ * "link": "",
+ * "name": "Camera 相机",
+ * "order": 6,
+ * "visible": 1
+ * },
+ * {
+ * "id": 7,
+ * "link": "",
+ * "name": "代码混淆 安全",
+ * "order": 7,
+ * "visible": 1
+ * },
+ * {
+ * "id": 8,
+ * "link": "",
+ * "name": "逆向 加固",
+ * "order": 8,
+ * "visible": 1
+ * }
+ * ],
+ * "errorCode": 0,
+ * "errorMsg": ""
+ * }
+ */
+// export const getSearchHotKeys = function () {
+//     return request.get('/hotkey/json', {
+//         params: {}
+//     })
+// }
+
+
+/**
+ * {
+ * "data": [
+ * {
+ * "category": "源码",
+ * "icon": "",
+ * "id": 22,
+ * "link": "https://www.androidos.net.cn/sourcecode",
+ * "name": "androidos",
+ * "order": 11,
+ * "visible": 1
+ * },
+ * {},
+ * {},
+ * {},
+ * {},
+ * {},
+ * {},
+ * {},
+ * {},
+ * {},
+ * {
+ * "category": "仓库",
+ * "icon": "",
+ * "id": 26,
+ * "link": "https://www.wanandroid.com/maven_pom/index",
+ * "name": "google",
+ * "order": 22,
+ * "visible": 1
+ * },
+ * {
+ * "category": "仓库",
+ * "icon": "",
+ * "id": 34,
+ * "link": "https://mvnrepository.com/artifact/com.google.code.gson/gson",
+ * "name": "maven",
+ * "order": 23,
+ * "visible": 1
+ * },
+ * {
+ * "category": "博客",
+ * "icon": "",
+ * "id": 1,
+ * "link": "http://blog.csdn.net/lmj623565791",
+ * "name": "鸿洋",
+ * "order": 31,
+ * "visible": 1
+ * },
+ * {
+ * "category": "博客",
+ * "icon": "",
+ * "id": 2,
+ * "link": "http://blog.csdn.net/guolin_blog",
+ * "name": "郭霖",
+ * "order": 32,
+ * "visible": 1
+ * },
+ * {
+ * "category": "博客",
+ * "icon": "",
+ * "id": 16,
+ * "link": "https://github.com/android-cn/android-dev-com",
+ * "name": "国外大牛",
+ * "order": 33,
+ * "visible": 1
+ * },
+ * {
+ * "category": "博客",
+ * "icon": "",
+ * "id": 17,
+ * "link": "http://www.wanandroid.com/article/list/0?cid=176",
+ * "name": "国内大牛",
+ * "order": 34,
+ * "visible": 1
+ * },
+ * {
+ * "category": "博客",
+ * "icon": "",
+ * "id": 35,
+ * "link": "https://github.com/xitu/gold-miner/blob/master/android.md",
+ * "name": "外文翻译",
+ * "order": 35,
+ * "visible": 1
+ * },
+ * {
+ * "category": "技术站",
+ * "icon": "",
+ * "id": 6,
+ * "link": "https://juejin.im/timeline/android",
+ * "name": "掘金",
+ * "order": 41,
+ * "visible": 1
+ * },
+ * {
+ * "category": "技术站",
+ * "icon": "",
+ * "id": 7,
+ * "link": "https://toutiao.io/",
+ * "name": "开发者头条",
+ * "order": 42,
+ * "visible": 1
+ * },
+ * {
+ * "category": "技术站",
+ * "icon": "",
+ * "id": 8,
+ * "link": "https://segmentfault.com/t/android",
+ * "name": "segmentfault",
+ * "order": 43,
+ * "visible": 1
+ * },
+ * {
+ * "category": "工具",
+ * "icon": "",
+ * "id": 50,
+ * "link": "https://www.wanandroid.com/tools/bejson",
+ * "name": "Json格式化",
+ * "order": 51,
+ * "visible": 1
+ * },
+ * {
+ * "category": "工具",
+ * "icon": "",
+ * "id": 51,
+ * "link": "https://www.wanandroid.com/tools/decode",
+ * "name": "Url decode",
+ * "order": 52,
+ * "visible": 1
+ * },
+ * {
+ * "category": "工具",
+ * "icon": "",
+ * "id": 52,
+ * "link": "https://www.wanandroid.com/tools/base64",
+ * "name": "Base64",
+ * "order": 53,
+ * "visible": 1
+ * },
+ * {
+ * "category": "工具",
+ * "icon": "",
+ * "id": 53,
+ * "link": "https://www.wanandroid.com/tools/digit",
+ * "name": "md5",
+ * "order": 54,
+ * "visible": 1
+ * },
+ * {
+ * "category": "工具",
+ * "icon": "",
+ * "id": 54,
+ * "link": "https://www.wanandroid.com/tools/color",
+ * "name": "取色器",
+ * "order": 55,
+ * "visible": 1
+ * },
+ * {
+ * "category": "工具",
+ * "icon": "",
+ * "id": 10,
+ * "link": "http://www.androiddevtools.cn/",
+ * "name": "androiddevtools",
+ * "order": 59,
+ * "visible": 1
+ * },
+ * {
+ * "category": "面试",
+ * "icon": "",
+ * "id": 12,
+ * "link": "http://www.wanandroid.com/article/list/0?cid=73",
+ * "name": "Android面试相关",
+ * "order": 71,
+ * "visible": 1
+ * },
+ * {
+ * "category": "Git",
+ * "icon": "",
+ * "id": 13,
+ * "link": "https://learngitbranching.js.org/",
+ * "name": "Git在线可视化学习",
+ * "order": 80,
+ * "visible": 1
+ * },
+ * {
+ * "category": "Kotlin",
+ * "icon": "",
+ * "id": 40,
+ * "link": "https://fabiomsr.github.io/from-java-to-kotlin/",
+ * "name": "java-to-kotlin",
+ * "order": 99,
+ * "visible": 1
+ * },
+ * {
+ * "category": "项目",
+ * "icon": "",
+ * "id": 4,
+ * "link": "https://github.com/trending/java",
+ * "name": "热门开源",
+ * "order": 888,
+ * "visible": 1
+ * },
+ * {
+ * "category": "项目",
+ * "icon": "",
+ * "id": 29,
+ * "link": "https://github.com/topics/android?l=java&amp;o=desc&amp;s=updated",
+ * "name": "最新开源",
+ * "order": 888,
+ * "visible": 1
+ * },
+ * {
+ * "category": "设计",
+ * "icon": "",
+ * "id": 27,
+ * "link": "https://domchristie.github.io/turndown/",
+ * "name": "html2markdown",
+ * "order": 998,
+ * "visible": 1
+ * },
+ * {
+ * "category": "设计",
+ * "icon": "",
+ * "id": 19,
+ * "link": "http://md.aclickall.com/",
+ * "name": "md在线编辑器",
+ * "order": 999,
+ * "visible": 1
+ * },
+ * {
+ * "category": "设计",
+ * "icon": "",
+ * "id": 20,
+ * "link": "https://unsplash.com/",
+ * "name": "无版权素材网站",
+ * "order": 999,
+ * "visible": 1
+ * },
+ * {
+ * "category": "设计",
+ * "icon": "",
+ * "id": 23,
+ * "link": "https://www.fotor.com.cn/",
+ * "name": "素材设计",
+ * "order": 999,
+ * "visible": 1
+ * },
+ * {
+ * "category": "简历",
+ * "icon": "",
+ * "id": 42,
+ * "link": "https://resumd.t9t.io/",
+ * "name": "markdown简历",
+ * "order": 999,
+ * "visible": 1
+ * },
+ * {
+ * "category": "设计",
+ * "icon": "",
+ * "id": 43,
+ * "link": "https://www.maliquankai.com/designnav/",
+ * "name": "设计资源",
+ * "order": 999,
+ * "visible": 1
+ * },
+ * {
+ * "category": "设计",
+ * "icon": "",
+ * "id": 32,
+ * "link": "http://inloop.github.io/interpolator/",
+ * "name": "在线调试动画",
+ * "order": 1000,
+ * "visible": 1
+ * },
+ * {
+ * "category": "设计",
+ * "icon": "",
+ * "id": 31,
+ * "link": "https://tool.gifhome.com/compress/",
+ * "name": "gif压缩",
+ * "order": 4444,
+ * "visible": 1
+ * }
+ * ],
+ * "errorCode": 0,
+ * "errorMsg": ""
+ * }
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
+export const getFrequentWebsite = function () {
+    return request.get('/friend/json', {
+        params: {}
+    })
+}
+
