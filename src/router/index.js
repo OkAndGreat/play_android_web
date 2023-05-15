@@ -9,8 +9,6 @@ import QaView from "@/views/QaView";
 import ProjectView from "@/views/ProjectView";
 import PublicView from "@/views/PublicView";
 import ToolsView from "@/views/ToolsView";
-import LoginView from "@/views/LoginView";
-import RegisterView from "@/views/RegisterView";
 import ProjectCategoryView from "@/views/ProjectCategoryView";
 
 const routes = [
@@ -24,9 +22,7 @@ const routes = [
     {path: '/project', component: ProjectView},
     {path: '/public', component: PublicView},
     {path: '/project_category', component: ProjectCategoryView},
-    {path: '/tools', component: ToolsView},
-    {path: '/login', component: LoginView},
-    {path: '/register', component: RegisterView},
+    {path: '/tools', component: ToolsView}
 ]
 
 const router = createRouter({

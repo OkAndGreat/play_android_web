@@ -1,34 +1,35 @@
 <template>
-  <div class="top_nav_header">
-    <div class="content wrapper">
-      <div class="logo">
-        <a href=""> <img src="https://www.wanandroid.com/resources/image/pc/logo.png" alt="logo"></a>
-      </div>
-        <TopNavBar></TopNavBar>
-      <div class="user">
-        <a href="#" class="login" @click="onLoginClicked">登录</a>
-        <a href="#" class="register" @click="onRegisterClicked">注册</a>
-      </div>
+    <div class="top_nav_header">
+        <div class="content wrapper">
+            <div class="logo">
+                <a href=""> <img src="https://www.wanandroid.com/resources/image/pc/logo.png" alt="logo"></a>
+            </div>
+            <TopNavBar></TopNavBar>
+            <div class="user">
+                <a href="#" class="login" @click="onLoginClicked">登录</a>
+                <a href="#" class="register" @click="onRegisterClicked">注册</a>
+            </div>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
 import TopNavBar from "@/components/TopNavBar";
+import bus from '@/mittBus'
 
 export default {
-  name: "TopNavViews",
-  methods: {
-    onLoginClicked() {
-      this.$router.replace('login')
+    name: "TopNavViews",
+    methods: {
+        onLoginClicked() {
+            bus.emit('onLoginBtnClicked', {})
+        },
+        onRegisterClicked() {
+            bus.emit('onRegisterBtnClicked', {})
+        }
     },
-    onRegisterClicked() {
-      this.$router.replace('register')
+    components: {
+        TopNavBar
     }
-  },
-  components: {
-    TopNavBar
-  }
 }
 </script>
 

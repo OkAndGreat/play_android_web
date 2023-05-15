@@ -38,7 +38,7 @@
         position: relative;
 
         &:hover {
-            background-color: red;
+            background-color: rgb(26, 117, 202);
         }
     }
 
